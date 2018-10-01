@@ -58,5 +58,11 @@ class Blog
        return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     }
+
+    public function index_html()
+    {
+        $stmt = \libs\Db::make()->query('SELECT * FROM blogs WHERE is_show=1 ORDER BY id DESC LIMIT 20');
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>

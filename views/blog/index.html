@@ -9,21 +9,20 @@
 </head>
 <body>
 <div>
-    <!--<form action="">-->
-    <!--关键字：-->
-    <!--<input type="text" name="keyword">-->
-    <!--开始日期:-->
-    <!--<input type="text" name="start_at">-->
-    <!--结束日期：-->
-    <!--<input type="text" name="end_at">-->
-    <!--是否显示-->
-    <!--<input type="radio" name="is_show" id="" value="">全部-->
-    <!--<input type="radio" name="is_show" id="" value="1">公开-->
-    <!--<input type="radio" name="is_show" value="0">私有-->
-        <!--<input type="submit" value="搜索">-->
-    <!--</form>-->
+    <form action="">
+    关键字：
+    <input type="text" name="keyword">
+    开始日期:
+    <input type="text" name="start_at">
+    结束日期：
+    <input type="text" name="end_at">
+    是否显示
+    <input type="radio" name="is_show" id="" value="">全部
+    <input type="radio" name="is_show" id="" value="1">公开
+    <input type="radio" name="is_show" value="0">私有
+        <input type="submit" value="搜索">
+    </form>
 </div>
-<h4>最新发表的日志</h4>
 <table border="1">
     <tr>
         <th>id</th>
@@ -33,7 +32,7 @@
         <th>操作</th>
 
     </tr>
-    <?php foreach($blogs as $v): ?>
+    <?php foreach($data as $v): ?>
     <tr>
         <td><?=$v['id'] ?> </td>
         <td>
@@ -50,6 +49,6 @@
     </tr>
     <?php endforeach; ?>
 </table>
-
+<?=$btns ?>
 </body>
 </html>
